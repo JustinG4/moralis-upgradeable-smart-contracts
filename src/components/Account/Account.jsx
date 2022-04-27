@@ -8,6 +8,7 @@ import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
 import Text from "antd/lib/typography/Text";
 import { connectors } from "./config";
+
 const styles = {
   account: {
     height: "42px",
@@ -53,7 +54,7 @@ function Account() {
     return (
       <>
         <div onClick={() => setIsAuthModalVisible(true)}>
-          <p style={styles.text}>Authenticate</p>
+          <p style={styles.text}>CONNECT</p>
         </div>
         <Modal
           visible={isAuthModalVisible}

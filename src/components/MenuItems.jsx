@@ -22,7 +22,7 @@ function MenuItems() {
         <NavLink to="/home">🚀 NFT Minter</NavLink>
       </Menu.Item>
       <Menu.Item key="/nftBalance">
-        <NavLink to="/nftBalance">🖼 NFTs</NavLink>
+        <NavLink to="/nftBalance">🖼 Collection</NavLink>
       </Menu.Item>
     </Menu>
   );
