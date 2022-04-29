@@ -7,14 +7,6 @@ import Button from '@mui/material/Button';
 function Form() {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
-    // email: "",
-    // password: "",
-    // confirmPassword: "",
-    // firstName: "",
-    // lastName: "",
-    // username: "",
-    // nationality: "",
-    // other: "",
     byRandom: false,
     byImage: false,
     walletAddress: "",
@@ -26,10 +18,10 @@ function Form() {
 
 
   const PageDisplay = () => {
-    if (page === 0) {
+    if (page == 0) {
       console.log(formData)
       return <SignUpInfo formData={formData} setFormData={setFormData} />;
-    } else if (page === 1) {
+    } else if (page == 1) {
       return <PersonalInfo formData={formData} setFormData={setFormData} />;
     } else {
       return <OtherInfo formData={formData} setFormData={setFormData} />;
@@ -37,7 +29,7 @@ function Form() {
   };
 
   const Next = () => {
-    setPage((currPage) => currPage + 1);
+    
   }
 
   return (
@@ -52,10 +44,10 @@ function Form() {
           <h1>{FormTitles[page]}</h1>
         </div>
         <div className="body">{PageDisplay()}</div>
-        {/* <div className="footer">
+        <div className="footer">
           <button
             disabled={page == 0}
-            onClick={() => Next()}
+            onClick={() => setPage((currPage) => currPage - 1)}
           >
             Prev
           </button>
@@ -71,7 +63,7 @@ function Form() {
           >
             {page === FormTitles.length - 1 ? "Submit" : "Next"}
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );
